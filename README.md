@@ -15,5 +15,21 @@ export PATH=/home/rprops/.local/bin:/:$PATH
 module load mothur R ncbi-blast
 ```
 
-# Run pipeline
-**Make sure the sample names are correct, no ':', '-' or '/' !**
+# Copy mothur.batch.taxass in your folder with the fastq files
+**Make sure the sample names of your fastq files are correct, no ':', '-' or '/' !**
+
+# Run this piece of code to select for a taxon of interest to perform oligotyping analysis on
+**If you want to oligotype everything do not run this.**
+```R
+sed -i "s/Bacteria/Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A/g" mothur.batch.taxass
+```
+# Make stability file
+```R
+paste <(ls *R1*.fastq | awk -F"_" '{print $1}') <(ls *R1*.fastq) <(ls *R2*.fastq) > stability.file
+```
+
+# Run batch script
+mothur mothur.batch.taxass
+
+# or submit everything as a pbs script
+qsub mothur.batch.taxass.pbs
