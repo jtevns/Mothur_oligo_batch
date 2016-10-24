@@ -16,4 +16,4 @@ module load mothur R ncbi-blast
 ```
 
 # Run pipeline
-**Make sure the sample names are correct, no ':', '-' or' /!**
+**Make sure the sample names are correct, no ':', '-' or '/' !**
