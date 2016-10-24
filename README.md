@@ -29,7 +29,10 @@ paste <(ls *R1*.fastq | awk -F"_" '{print $1}') <(ls *R1*.fastq) <(ls *R2*.fastq
 ```
 
 # Run batch script
+```R
 mothur mothur.batch.taxass
-
+```
 # or all the above as a pbs script
+```R
 qsub mothur.batch.taxass.pbs
+```
