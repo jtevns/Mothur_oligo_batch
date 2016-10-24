@@ -10,4 +10,7 @@ Add path to your bash_profile (if this was not yet the case):
 ```R
 export PATH=/home/rprops/.local/bin:/:$PATH
 ```
-# 
+#  Load modules
+```R
+module load mothur R ncbi-blast
+```
