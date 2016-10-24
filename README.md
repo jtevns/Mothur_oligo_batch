@@ -14,3 +14,6 @@ export PATH=/home/rprops/.local/bin:/:$PATH
 ```R
 module load mothur R ncbi-blast
 ```
+
+# Run pipeline
+** Make sure the sample names are correct, no ':','-' or' /! **
