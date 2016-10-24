@@ -31,5 +31,5 @@ paste <(ls *R1*.fastq | awk -F"_" '{print $1}') <(ls *R1*.fastq) <(ls *R2*.fastq
 # Run batch script
 mothur mothur.batch.taxass
 
-# or submit everything as a pbs script
+# or all the above as a pbs script
 qsub mothur.batch.taxass.pbs
