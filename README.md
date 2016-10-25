@@ -25,7 +25,7 @@ sed -i "s/Bacteria/Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;be
 ```
 # Make stability file
 ```R
-paste <(ls *R1*.fastq | awk -F"_" '{print $1}') <(ls *R1*.fastq) <(ls *R2*.fastq) > stability.file
+paste <(ls *_R1_*.fastq | awk -F"_" '{print $1}') <(ls *_R1_*.fastq) <(ls *_R2_*.fastq) > stability.file
 ```
 
 # Run batch script
