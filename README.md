@@ -17,6 +17,11 @@ module load mothur R ncbi-blast
 
 # Copy mothur.batch.taxass in your folder with the fastq files
 **Make sure the sample names of your fastq files are correct, no ':', '-' or '/' !**
+In case you have to rename your files adapt the following code line:
+```R
+find /scratch/vdenef_fluxm/rprops/process2/UM_ML14 -type f -exec rename '-' '' {} \;
+```
+This will remove "-" from your sample names. You may have to run rerun this several times if you have multiple "-" in your sample names.
 
 # Run this piece of code to select for a taxon of interest to perform oligotyping analysis on
 **If you want to oligotype everything do not run this.**
