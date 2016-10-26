@@ -25,6 +25,7 @@ This will remove "-" from your sample names. You may have to run rerun this seve
 
 # Run this piece of code to select for a taxon of interest to perform oligotyping analysis on
 **If you want to oligotype everything do not run this.**
+Replace <code> Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A </code> with your taxon of interest.
 ```R
 sed -i "s/Bacteria/Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A/g" mothur.batch.taxass
 ```
