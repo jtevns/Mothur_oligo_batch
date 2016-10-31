@@ -20,9 +20,13 @@ ls -a 	#Show all files in your home directory, including hidden ones (like your 
 ```
 Then under the line that includes "PATH=$PATH:$HOME/bin" that you have the following:
 ```R
-export PATH=/home/rprops/.local/bin:/:$PATH
+export PATH=/home/rprops/.local/bin:/:$PATH  # Be sure to change "rprops" to YOUR USER NAME!
 ```
-If you do not have the above line, please add it and change *rprops* to be **your user name!**
+If you do not have the above line, please edit it with nano:
+
+```R
+nano .bash_profile
+```
 
 #  Load modules
 ```R
