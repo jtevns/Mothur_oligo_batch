@@ -9,7 +9,7 @@ pip install --user oligotyping
 To check to make sure that the path to the oligotyping package is correct, try using a command from the oligotyping module:
 
 ```R
-oligotype
+oligotype -h
 ```
 If it says "-bash: oligotype: command not found", then it is possible that your path to the oligotyping package is incorrect.  Therefore, we need to fix our path.  To do so we will edit the .bash_profile file in our home directory.
 
@@ -42,7 +42,7 @@ find /scratch/vdenef_fluxm/rprops/process2/UM_ML14 -type f -exec rename '-' '' {
 This will remove "-" from your sample names. You may have to run rerun this several times if you have multiple "-" in your sample names.
 
 # Run this piece of code to select for a taxon of interest to perform oligotyping analysis on
-**If you want to oligotype everything do not run this.**
+**If you want to oligotype everything do not run this.** 
 Replace <code> Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A </code> with your taxon of interest.
 ```R
 sed -i "s/Bacteria/Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A/g" mothur.batch.taxass
