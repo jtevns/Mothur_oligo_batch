@@ -6,10 +6,24 @@ Singular batch analysis by mothur/oligotyping
 module load python-anaconda2/201607
 pip install --user oligotyping
 ```
-Add path to your bash_profile (if this was not yet the case):
+To check to make sure that the path to the oligotyping package is correct, try using a command from the oligotyping module:
+
+```R
+oligotype
+```
+If it says "-bash: oligotype: command not found", then it is possible that your path to the oligotyping package is incorrect.  Therefore, we need to fix our path.  To do so we will edit the .bash_profile file in our home directory.
+
+In your current directory type:
+```R
+cd 	#This will take you to your *home* directory
+ls -a 	#Show all files in your home directory, including hidden ones (like your .bash_profile file!)
+```
+Then under the line that includes "PATH=$PATH:$HOME/bin" that you have the following:
 ```R
 export PATH=/home/rprops/.local/bin:/:$PATH
 ```
+If you do not have the above line, please add it and change *rprops* to be **your user name!**
+
 #  Load modules
 ```R
 module load mothur R ncbi-blast
