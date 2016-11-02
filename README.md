@@ -28,6 +28,7 @@ If you do not have the above line, please edit it with nano:
 nano .bash_profile
 ```
 
+For the TaxAss script make sure you have the <code>dplyr</code> and <code>reshape</code> R packages installed.
 #  Load modules
 ```
 module load mothur R ncbi-blast
@@ -47,6 +48,7 @@ Replace <code> Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;b
 ```
 sed -i "s/Bacteria/Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A/g" mothur.batch.taxass
 ```
+
 # Make stability file
 Should you get an error during <code>make.contigs</code> then check if the &#95;R1&#95; and &#95;R2&#95; pattern does not occur in the sample name.
 ```
