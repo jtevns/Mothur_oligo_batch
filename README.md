@@ -54,7 +54,7 @@ paste <(ls *_R1_*.fastq | awk -F"_" '{print $1}') <(ls *_R1_*.fastq) <(ls *_R2_*
 ```
 
 # To make sure that you don't have hidden characters (i.e. from Windows)
-```R
+```
 dos2unix mothur.batch.taxass
 dos2unix mothur.batch.taxass.pbs
 ```
