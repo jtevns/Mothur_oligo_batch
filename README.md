@@ -28,7 +28,7 @@ If you do not have the above line, please edit it with nano:
 nano .bash_profile
 ```
 
-For the TaxAss script make sure you have the <code>dplyr</code> and <code>reshape</code> R packages installed.
+For the TaxAss script make sure you have the <code>dplyr</code> and <code>reshape</code> R packages installed in your local R version.
 #  Load modules
 ```
 module load mothur R ncbi-blast
