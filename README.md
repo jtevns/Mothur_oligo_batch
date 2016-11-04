@@ -68,7 +68,7 @@ Should you get an error during <code>make.contigs</code> then check if the &#95;
 ```
 paste <(ls *_R1_*.fastq | awk -F"_" '{print $1}') <(ls *_R1_*.fastq) <(ls *_R2_*.fastq) > stability.file
 ```
-# In Windows, you can check to make sure that you don't have hidden characters
+### In Windows, you can check to make sure that you don't have hidden characters
 ```
 dos2unix mothur.batch.taxass
 dos2unix mothur.batch.taxass.pbs
