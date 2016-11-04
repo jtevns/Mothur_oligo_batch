@@ -34,3 +34,4 @@ system(paste stability.contigs.good.groups intermediate1 | awk 'BEGIN{FS="\t"}{p
 system(perl /nfs/vdenef-lab/Shared/Ruben/scripts_taxass/renamer.pl stability.trim.contigs.good.unique.good.filter.unique.pick.redundant.fasta intermediate2)
 system(o-pad-with-gaps *_headers-replaced.fasta)
 system(decompose *-PADDED-WITH-GAPS)
+system(bash /nfs/vdenef-lab/Shared/Ruben/scripts_taxass/TaxAss_oligo.sh)
