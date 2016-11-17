@@ -1,5 +1,3 @@
-# Created by Ruben Props
-
 # Mothur_oligo_batch
 This repository was created by Ruben Props to run both mothur and oligotyping via a batch script on the University of Michigan HPC Flux system on 16S rRNA fastq files produced by Illumina MiSeq sequencing.
 
