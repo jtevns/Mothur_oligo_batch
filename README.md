@@ -82,3 +82,17 @@ mothur mothur.batch.taxass  #Option A
  # OR
 qsub mothur.batch.taxass.pbs  #Option B
 ```
+
+## Optional step 10: Create a phyloseq object with the `make_phyloseq.R` script.
+```
+Rscript make_phyloseq.R mothur.shared mothur.cons.taxonomy ./stability-m0.10-A0-M0-d4/MATRIX-COUNT.txt ./stability-m0.10-A0-M0-d4/oligo.taxonomy
+```
+There are 4 inputs in the above code:
+ 1. mothur `shared` file
+ 2. mothur `cons.taxonomy` file 
+ 3. oligotyping `shared` file 
+ 4. oligotyping `tax` file  
+ 
+You can specify the full path (as above for the oligotyping data which was located in a different folder) or you may write the file names if you are in the same working directory.
+
+**Note** that instead of copying this script in every new directory, you can refer to the script by its full path in the `rprops` nfs directory: `/nfs/vdenef-lab/Shared/Ruben/scripts_taxass/make_phyloseq.R`
