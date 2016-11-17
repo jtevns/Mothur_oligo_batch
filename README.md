@@ -42,7 +42,9 @@ For the TaxAss script make sure you have the <code>dplyr</code> and <code>reshap
 
 ```
 R # open R
-install.packages(c("dplyr", "reshape)) # install the packages
+install.packages(c("dplyr", "reshape","splitstackshape","data.table")) # install the packages
+source("https://bioconductor.org/biocLite.R")
+biocLite("phyloseq") 
 quit() # exit R
 ```
 
