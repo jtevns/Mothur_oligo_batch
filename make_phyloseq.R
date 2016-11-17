@@ -7,13 +7,13 @@ mo.tax <- userprefs[2]
 oligo.data <- userprefs[3]
 oligo.tax <- userprefs[4]
 
-cat(paste0(date(),"\tMaking mothur phyloseq object"))
+cat(paste0(date(),"\tMaking mothur phyloseq object\n"))
 
 ### Make mothur phyloseq object
 phy.m <- import_mothur(mothur_shared_file = mo.data,
                                      mothur_constaxonomy_file = mo.tax)
 ### Make oligotyping phyloseq object
-cat(paste0(date(),"\tMaking MED phyloseq object"))
+cat(paste0(date(),"\tMaking MED phyloseq object\n"))
 data.med <- data.frame(fread(input=oligo.data))
 colnames(data.med) <- data.med[1,]; rownames(data.med) <- data.med[,1]
 data.med <- data.med[-1,];data.med <- data.med[,-1]
@@ -28,7 +28,7 @@ tax.med <- t(do.call(rbind,lapply(tax.med, as.character)))
 rownames(tax.med) <- inter
 phy.o <- phyloseq(otu_table(data.med,taxa_are_rows=FALSE),tax_table(tax.med))
 
-cat(paste0(date(),"\tExporting data to Phyloseq.RData"))
+cat(paste0(date(),"\tExporting data to Phyloseq.RData\n"))
 save(list=c("phy.m","phy.o"), file=paste0("Phyloseq.RData"))
-cat(paste0(date(),"\tDone!"))
+cat(paste0(date(),"\tDone!\n"))
 
