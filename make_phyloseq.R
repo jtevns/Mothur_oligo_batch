@@ -19,7 +19,7 @@ oligo.tax <- userprefs[4]
 # Write an update in the commandline that the script is working...
 cat(paste0(date(),"\tMaking mothur phyloseq object\n"))
 
-### Make 1mothur phyloseq object
+### Make mothur phyloseq object
 phy.otu <- import_mothur(mothur_shared_file = mo.data,
                                      mothur_constaxonomy_file = mo.tax)
 ### Make oligotyping phyloseq object 
