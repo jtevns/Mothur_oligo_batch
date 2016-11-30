@@ -3,7 +3,7 @@
 #PBS -M rprops@umich.edu
 #PBS -m abe
 
-#PBS -l nodes=1:ppn=10,mem=250gb,walltime=10:00:00
+#PBS -l nodes=1:ppn=10,mem=250gb,walltime=24:00:00
 #PBS -V
 
 #PBS -A vdenef_fluxm
