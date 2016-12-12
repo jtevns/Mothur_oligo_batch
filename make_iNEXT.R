@@ -43,7 +43,7 @@ otu.div <- estimateD(otu.table, datatype = "abundance", base = "size", level = c
 # Finalize script
 cat(paste0(date(),"\tExporting data to iNEXT_otu_oligo.RData\n")) # Update user that .Rdata is being exported
 save(list=c("iNEXT.oligo", "oligo.div","iNEXT.otu", "otu.div"), file=paste0("iNEXT_otu_oligo.RData")) # Create a new file called "Phyloseq.RData" that has the phyloseq object
-cat(paste0(date(),"\tDone! Time to work on your alpha diversity 9analysis!\n")) # Script has finished!
+cat(paste0(date(),"\tDone! Time to work on your alpha diversity analysis!\n")) # Script has finished!
 
 
 # SOURCES:
