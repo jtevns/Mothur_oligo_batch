@@ -1,7 +1,8 @@
 # Mothur_oligo_batch
 This repository was created by Ruben Props to run both mothur and oligotyping via a batch script on the University of Michigan HPC Flux system on 16S rRNA fastq files produced by Illumina MiSeq sequencing.
 
-To Run the batch script (Mothur.batch.taxass), please follow the directions below:
+To Run the batch script (Mothur.batch.taxass), please follow the directions below.
+**01/26/2017 -- Added Mothur.batch.general and make_phyloseq_general for general classification with SILVA**
 
 ## 1. Sign into the University of Michigan Flux system.
 
