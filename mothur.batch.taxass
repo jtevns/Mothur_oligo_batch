@@ -20,7 +20,7 @@ classify.seqs(seed=777, fasta=otus.below.97.fasta, template=silva.nr_v123.align,
 classify.seqs(seed=777, fasta=otus.above.97.fasta, template=FreshTrain18Aug2016.fasta,  taxonomy=FreshTrain18Aug2016.taxonomy, method=wang, probs=T, cutoff=80)
 system(cat otus.above.97.FreshTrain18Aug2016.wang.taxonomy otus.below.97.nr_v123.wang.taxonomy > final.FWDB.Silva.taxonomy)
 remove.lineage(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=current, taxonomy=final.FWDB.Silva.taxonomy, taxon=Mitochondria-unknown-Archaea-Eukaryota-Chloroplast)
-cluster.split(fasta=current, count=current, taxonomy=current, splitmethod=classify, taxlevel=4, cutoff=0.15)
+cluster.split(fasta=current, count=current, taxonomy=current, splitmethod=classify, taxlevel=4, cutoff=0.15, method=average)
 summary.seqs(count=current)
 make.shared(list=current, count=current, label=0.03)
 classify.otu(list=current, count=current, taxonomy=final.FWDB.Silva.pick.taxonomy, label=0.03)
