@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=zip-temp
+#SBATCH --job-name=mothur
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=36
 #SBATCH --mem=180g
-#SBATCH --time=5-36:00:00
+#SBATCH --time=36:00:00
 #SBATCH --account=vdenef1
 #SBATCH --partition=standard
 #SBATCH --mail-user=jtevans@umich.edu
