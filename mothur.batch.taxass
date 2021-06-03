@@ -1,6 +1,5 @@
 set.current(processors=36)
 set.dir(tempdefault=/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/data)
-pcr.seqs(fasta=silva.seed_v132.align, start=11894, end=25319, keepdots=F)
 make.contigs(file=stability.file)
 screen.seqs(fasta=current, group=current, maxambig=0, minlength=240, maxhomop=8, maxlength=275)
 summary.seqs(fasta=current)
