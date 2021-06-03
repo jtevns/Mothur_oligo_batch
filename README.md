@@ -34,6 +34,7 @@ mothur /nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/mothur.batch.taxass 
 copy /nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/mothur_slurm.sh to your working directory
 uncomment the corrent mothur workflow you want to use (with or without oligotyping)
 change the email to yours
+change the account to the appropriate one for your lab
 ```bash
 sbatch mothur_slurm.sh  #Option B
 ```
