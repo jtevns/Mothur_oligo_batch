@@ -24,14 +24,14 @@ taxonomy_ref="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/FreshTrain18Aug2016.
 general_fasta="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/silva.nr_v123.align"
 general_tax="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/silva.nr_v123.tax"
 pid=97
-script_location="/nfs/vdenef-lab/Shared/Ruben/scripts_taxass"
+script_location="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/scripts/scripts_taxass"
 
 #####################################################################################################
 ### Run classification code
 #####################################################################################################
 
 # Remove '-' due to alignment (BLAST can't cope with this)
-sed -e '/>/!s/-//g' <$(echo $fasta) >sequence.fasta
+sed -e '/>/!s/-//g' <$(echo $fasta) > sequence.fasta
 
 # Step 0: Create blast database
 makeblastdb -dbtype nucl -in $(echo $fasta_ref) -input_type fasta -parse_seqids -out FWonly_18Aug2016custom.db
@@ -44,8 +44,8 @@ blast_formatter -archive custom.blast -outfmt "6 qseqid pident length qlen qstar
 Rscript $(echo "$script_location/calc_full_length_pident.R") otus.custom.blast.table otus.custom.blast.table.modified
 
 # Step 3: Filter BLAST results
-Rscript $(echo "$script_location/filter_seqIDs_by_pident.R") otus.custom.blast.table.modified ids.above.97 $pid TRUE
-Rscript $(echo "$script_location/filter_seqIDs_by_pident.R") otus.custom.blast.table.modified ids.below.97 $pid FALSE
+Rscript $(echo "$script_location/filter_seqIDs_by_pident.R") otus.custom.blast.table.modified ids.above.${pid} $pid TRUE
+Rscript $(echo "$script_location/filter_seqIDs_by_pident.R") otus.custom.blast.table.modified ids.below.${pid} $pid FALSE
 
 # Step 4: 
 mkdir plots
@@ -53,8 +53,8 @@ Rscript $(echo "$script_location/plot_blast_hit_stats.R") otus.custom.blast.tabl
 
 # Step 5: recover sequence IDs left out of blast (python, bash)
 python $(echo "$script_location/find_seqIDs_blast_removed.py") sequence.fasta otus.custom.blast.table.modified ids.missing
-cat ids.below.97 ids.missing > ids.below.97.all
+cat ids.below.${pid} ids.missing > ids.below.${pid}.all
 
 # Step 6: create fasta files of desired sequence IDs (python)
-python $(echo "$script_location/create_fastas_given_seqIDs.py") ids.above.97 sequence.fasta otus.above.97.fasta
-python $(echo "$script_location/create_fastas_given_seqIDs.py") ids.below.97.all sequence.fasta otus.below.97.fasta
+python $(echo "$script_location/create_fastas_given_seqIDs.py") ids.above.${pid} sequence.fasta otus.above.${pid}.fasta
+python $(echo "$script_location/create_fastas_given_seqIDs.py") ids.below.${pid}.all sequence.fasta otus.below.${pid}.fasta

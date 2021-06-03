@@ -23,7 +23,7 @@ taxonomy_ref="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/FreshTrain18Aug2016.
 general_fasta="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/silva.nr_v123.align"
 general_tax="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/silva.nr_v123.tax"
 pid=97
-script_location="/nfs/vdenef-lab/Shared/Ruben/scripts_taxass"
+script_location="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/scripts/scripts_taxass"
 
 #####################################################################################################
 ### Run classification code
@@ -33,7 +33,7 @@ script_location="/nfs/vdenef-lab/Shared/Ruben/scripts_taxass"
 cd ./stability-m0.10-A0-M0-d4/
 
 # Remove '-' due to alignment (BLAST can't cope with this)
-sed -e '/>/!s/-//g' <$(echo $fasta) >sequence.fasta
+sed -e '/>/!s/-//g' <$(echo $fasta) > sequence.fasta
 
 # Step 0: Create blast database
 makeblastdb -dbtype nucl -in $(echo $fasta_ref) -input_type fasta -parse_seqids -out FWonly_18Aug2016custom.db
@@ -66,7 +66,7 @@ mothur "#classify.seqs(seed=777, fasta=oligo.below.97.fasta, template=$general_f
 mothur "#classify.seqs(seed=777, fasta=oligo.above.97.fasta, template=$fasta_ref, taxonomy=$taxonomy_ref, method=wang, probs=T, cutoff=80)"
 
 # Combine taxonomy files
-cat oligo.below.97.nr_v123.wang.taxonomy oligo.above.97.FreshTrain18Aug2016.wang.taxonomy > oligo.taxonomy
+cat oligo.below.97.nr_v132.wang.taxonomy oligo.above.97.FreshTrain18Aug2016.wang.taxonomy > oligo.taxonomy
 
 # Go back to original working directory
 cd ..
