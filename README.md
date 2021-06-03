@@ -19,6 +19,7 @@ Replace <code> Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;b
 ```
 sed -i "s/Bacteria/Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;betI;betI_A/g" mothur.batch.taxass
 ```
+If you do this you should change the slurm script or your command to point to this script instead of the default one.
 
 ## 5. Make stability file (file with sample names and corresponding fastq files for that sample).
 Should you get an error during <code>make.contigs</code> then check if the &#95;R1&#95; and &#95;R2&#95; pattern does not occur in the sample name.
