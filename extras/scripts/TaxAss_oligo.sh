@@ -7,7 +7,7 @@
 # Provide name of fasta file of samples to classify
 fasta="NODE-REPRESENTATIVES.fasta"
 # Number of Processors
-processors=20
+processors=36
 
 #####################################################################################################
 ### Do not adjust anything below this line unless you want to update the databases
@@ -17,11 +17,11 @@ processors=20
 #####################################################################################################
 
 ## Specific database (FWDB)
-fasta_ref="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/FreshTrain18Aug2016.fasta"
-taxonomy_ref="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/FreshTrain18Aug2016.taxonomy"
+fasta_ref="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/data/FreshTrain18Aug2016.fasta"
+taxonomy_ref="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/data/FreshTrain18Aug2016.taxonomy"
 ## General database (SILVA)
-general_fasta="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/silva.nr_v123.align"
-general_tax="/nfs/vdenef-lab/Shared/Ruben/databases_taxass/silva.nr_v123.tax"
+general_fasta="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/data/silva.nr_v132.align"
+general_tax="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/data/silva.nr_v132.tax"
 pid=97
 script_location="/nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/scripts/scripts_taxass"
 
