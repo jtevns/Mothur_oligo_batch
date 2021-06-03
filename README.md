@@ -49,5 +49,3 @@ There are 4 inputs in the above code:
  4. oligotyping `tax` file  
  
 You can specify the full path (as above for the oligotyping data which was located in a different folder) or you may write the file names if you are in the same working directory.
-
-**Note** that instead of copying this script in every new directory, you can refer to the script by its full path in the `rprops` nfs directory: `/nfs/vdenef-lab/Shared/Ruben/scripts_taxass/make_phyloseq.R`
