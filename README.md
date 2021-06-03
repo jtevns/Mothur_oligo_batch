@@ -27,7 +27,7 @@ paste <(ls path/to/fastq/*_R1_*.fastq | awk -F"_" '{print $1}') <(ls *_R1_*.fast
 ```
 
 ## 6. You're ready to go!  Option A:  Run the `mothur.batch.taxass` or option B: submit a job to flux with the `mothur.batch.taxass.pbs`.
-``bash
+```bash
 mothur /nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/mothur.batch.taxass  #Option A
 ```
 ### Or
