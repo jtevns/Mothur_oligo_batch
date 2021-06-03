@@ -37,4 +37,4 @@ system(o-pad-with-gaps *_headers-replaced.fasta)
 # error in nmds oligotyping so skip gen figures
 system(decompose *-PADDED-WITH-GAPS --skip-gen-figures)
 system(bash /nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/scripts/TaxAss_oligo.sh)
-system(Rscript /nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/scripts/make_phyloseq.R stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.shared stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.cons.taxonomy ./stability-m0.10-A0-M0-d4/MATRIX-COUNT.txt ./stability-m0.10-A0-M0-d4/oligo.taxonomy)
+#system(Rscript /nfs/turbo/lsa-dudelabs/pipelines/Mothur_oligo_batch/extras/scripts/make_phyloseq.R stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.shared stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.cons.taxonomy ./stability-m0.10-A0-M0-d4/MATRIX-COUNT.txt ./stability-m0.10-A0-M0-d4/oligo.taxonomy)
