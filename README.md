@@ -4,7 +4,11 @@
 ```bash
 module load Bioinformatics mothur ncbi-blast
 ```
-## 2. create a folder with your fastq files
+## 2. Create a folder with your fastq files and enter it. Unzip the files if they end in .gz
+```bash
+gzip -d *
+```
+
 ## 3. **Make sure the sample names of your fastq files are correct. Mothur does **not** accept: ':', '-' or '/' !**
 If you have to rename your files, you can run the following line of code:
 ```bash
